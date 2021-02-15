@@ -71,6 +71,8 @@
   --simple-gray:#F1F5F7;
   --dark-grey:#A9A9A9;
   --form-field: #C5C5C5;
+  --new-gray:#F7F3EC;
+  --new-gray2:#F1F1F1;
 }
 
 body
@@ -264,7 +266,7 @@ text-transform: uppercase;
 font-weight: bold;
 font-size: 18px;
 line-height: 20px;
-color:var(--basic-black);
+
 }
 .subject s
 {
@@ -277,13 +279,17 @@ font-size: 17px;
 line-height: 18px;
 color:var(--basic-white);
 }
-.popular-products .buy-link-subject
+.subject .name
+{
+  color:var(--basic-black);
+}
+.buy-link-subject
 {
   background-color: var(--basic-green);
   color:var(--basic-white);
   font-weight: normal;
 }
-.popular-products .bookmark-link-subject
+.bookmark-link-subject
 {
   background-color:var(--basic-white);
   color:var(--extra-dark-blue);
@@ -292,15 +298,15 @@ color:var(--basic-white);
   box-sizing: border-box;
   border-radius: 2px;
 }
-.popular-products .buy-link-subject:hover
+.buy-link-subject:hover
 {
   background-color:var( --success-green);
 }
-.popular-products .buy-link-subject:active
+.buy-link-subject:active
 {
   background-color:var( --dark-green);
 }
-.popular-products .bookmark-link-subject:hover
+.bookmark-link-subject:hover
 {
   border: 3px solid var(--extra-dark-blue);
 }
@@ -313,7 +319,7 @@ line-height: 30px;
 }
 .services .about-services
 {
-font-family: PT Sans;
+font-family: "PT Sans";
 font-style: normal;
 font-weight: normal;
 font-size: 13px;
@@ -341,7 +347,7 @@ line-height: 24px;
 }
 .services .service-description{
 
-font-family: Cuprum;
+font-family: "Cuprum";
 font-size: 13px;
 line-height: 24px;
 }
@@ -404,4 +410,125 @@ border-radius: 2px;
 .footer-mail a:active, .footer-academy-site a:active
 {
   color:var( --red-logo);
+}
+.bread-crumps li, .bread-crumps a
+{
+font-family: "PT Sans";
+font-size: 13px;
+line-height: 18px;
+color:var( --basic-black);
+}
+.current-catalog-wrapper {
+  background:var( --simple-gray);
+}
+.filter-title, .price-slider, .sorting, .filter-price-limit {
+  background:var( --new-gray);
+}
+.filter-title
+{
+  font-family: "PT Sans";
+font-size: 13px;
+line-height: 18px;
+color:var( --basic-black);
+}
+.manufacturer-filter-name, .price-filter-name, .charging-filter-name
+{
+font-family: "PT Sans";
+font-style: normal;
+font-weight: bold;
+font-size: 17px;
+line-height: 30px;
+}
+.filters label {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-size: 15px;
+  line-height: 19px;
+}
+.sorting a
+{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-size: 13px;
+  line-height: 18px;
+  opacity: 0.3;
+  border-bottom: 1px dotted var(--red-logo);
+  color:var(--basic-black);
+}
+.sorting a:hover
+{
+  opacity: 1;
+  border-bottom: 1px solid  var(--red-logo);
+}
+.sorting a:active
+{
+  opacity: 1;
+  border-bottom: none;
+  color:var(--red-logo);
+}
+.page-separator a{
+  color:var(--basic-black);
+}
+.page-separator li{
+  border: 1px solid var(--basic-neutral);
+}
+.page-separator .first-page{
+  background: var(--red-logo);
+  color:var(--basic-white);
+}
+.page-separator li:hover{
+  border: 1px solid var(--form-field);
+}
+.page-separator li:active{
+  border: 1px solid var(--red-logo);
+}
+.perforators-article h3
+{
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+}
+.perforators-article p
+{
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 24px;
+}
+.in-bin-popup
+{
+  border-top: 7px solid  var(--red-logo);
+}
+.in-bin-popup b
+{
+font-family: "Cuprum";
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 30px;
+}
+.in-bin-popup-footer
+{
+  background: var(--new-gray2);
+}
+.in-bin-popup-footer .make-order, .in-bin-popup-footer .continue-shopping
+{
+  font-family: "Cuprum";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+.in-bin-popup-footer .make-order
+{
+  background: var(--red-logo);
+  color:var(--basic-white);
+}
+.in-bin-popup-footer .continue-shopping
+{
+  background: var(--basic-white);
+  color:var(--basic-black);
 }
