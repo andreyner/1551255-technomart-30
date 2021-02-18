@@ -8,14 +8,14 @@
   <link rel="icon" href="img/favIcons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favIcons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link href="normalize.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body>
   <header class="main-header">
     <div class="header-container">
-      <a href="#" class="main-header-logo">
+      <a href="./index.html" class="main-header-logo">
         Техномарт
       </a>
       <form action="#" method="post">
@@ -44,7 +44,7 @@
       <div>
         <p class="store-description-phone">
           <img src="https://via.placeholder.com/19x19" alt="Телефон">
-          +7 (812) 555-05-55
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
         </p>
         <p class="store-description-address">
           г.Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
@@ -82,10 +82,9 @@
       </h2>
     </div>
     <section class="filters">
-      <h3>Фильтрация</h3>
-      <div class="filter-title">
+      <h3 class="filter-title">
         Фильтр:
-      </div>
+      </h3>
       <form method="POST" action="https://echo.htmlacademy.ru/">
         <div>
           <div class="price-filter-name">
@@ -284,7 +283,7 @@
       </ul>
       <div>
         <ul class="page-separator">
-          <li><a class="first-page" href="#">1</a></li>
+          <li><a class="first-page">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
           <li><a href="#">СЛЕДУЮЩАЯ</a></li>
@@ -342,7 +341,8 @@
       </div>
       <div>
         <p class="main-footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          +7 (812) 555-05-55</p>
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+        </p>
         <nav>
           <ul class="footer-additional-navigation">
             <li> <a href="blank.html">Материалы</a></li>

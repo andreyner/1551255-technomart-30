@@ -8,7 +8,7 @@
   <link rel="icon" href="img/favIcons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favIcons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-  <link href="normalize.css" rel="stylesheet">
+  <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
@@ -44,7 +44,7 @@
       <div>
         <p class="store-description-phone">
           <img src="https://via.placeholder.com/19x19" alt="Телефон">
-          +7 (812) 555-05-55
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
         </p>
         <p class="store-description-address">
           г.Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
@@ -74,36 +74,63 @@
       <div>
         <div>
           <div class="features-materials">
-            <a href="#">
-              <img src="https://via.placeholder.com/60x40" alt="Материалы">
+            <span>Материалы</span>
+            <a class="features-opening" href="#">
+              <span> На любой вкус</span>
             </a>
+            <img src="https://via.placeholder.com/60x40" alt="Материалы">
           </div>
           <div class="features-tools">
-            <a href="#">
-              <img src="https://via.placeholder.com/60x40" alt="Инструменты">
+            <span>Инструменты</span>
+            <a class="features-opening" href="#">
+              <span> На все случаи жизни</span>
             </a>
+            <img src="https://via.placeholder.com/60x40" alt="Инструменты">
           </div>
           <div class="features-technics">
-            <a href="#">
-              <img src="https://via.placeholder.com/60x40" alt="Техника">
+            <span>Техника</span>
+            <a class="features-opening" href="#">
+              <span> Для стройки</span>
             </a>
+            <img src="https://via.placeholder.com/60x40" alt="Техника">
           </div>
         </div>
         <div>
           <div class="features-perforators">
-            <a href="#">
-              <img src="https://via.placeholder.com/120x80" alt="Перфораторы">
+            <div class="features-perforators-title">
+              Перфораторы
+              <span>Настоящие мужские игрушки</span>
+            </div>
+            <a class="perforators-slider-left" href="#">
+              <img src="https://via.placeholder.com/22x40" alt="">
             </a>
+            <a class="perforators-slider-right" href="#">
+              <img src="https://via.placeholder.com/22x40" alt="">
+            </a>
+            <a class="perforators-catalog" href="#">
+              Открыть каталог
+            </a>
+            <a class="perforators-disable-switch" href="#">
+              <img src="https://via.placeholder.com/6x6" alt="">
+            </a>
+            <a class="perforators-active-switch" href="#">
+              <img src="https://via.placeholder.com/6x6" alt="">
+            </a>
+            <img src="https://via.placeholder.com/120x80" alt="Перфораторы">
           </div>
           <div class="features-discounts">
-            <a href="#">
-              <img src="https://via.placeholder.com/60x40" alt="Скидки 50%">
+            <span>Скидки 50%</span>
+            <a class="features-opening" href="#">
+              <span>На 350 товаров</span>
             </a>
+            <img src="https://via.placeholder.com/60x40" alt="Скидки 50%">
           </div>
           <div class="features-delivery">
-            <a href="#">
-              <img src="https://via.placeholder.com/60x40" alt="Доставка">
+            <span>Доставка</span>
+            <a class="features-opening" href="#">
+              <span>Бесплатно</span>
             </a>
+            <img src="https://via.placeholder.com/60x40" alt="Доставка">
           </div>
         </div>
       </div>
@@ -328,7 +355,8 @@
       </div>
       <div>
         <p class="main-footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
-          +7 (812) 555-05-55</p>
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+        </p>
         <nav>
           <ul class="footer-additional-navigation">
             <li> <a href="blank.html">Материалы</a></li>
