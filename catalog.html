@@ -32,11 +32,16 @@
           <img src="https://via.placeholder.com/20x20" alt="Закладки">
           Закладки
         </a>
-        <a class="bin" href="#">
-          <img src="https://via.placeholder.com/20x20" alt="Корзина">
-          Корзина
-        </a>
-        <a class="make-order" href="#">Оформить заказ</a>
+        <div>
+          <a class="bin" href="#">
+            <img src="https://via.placeholder.com/20x20" alt="Корзина">
+            Корзина
+          </a>
+        </div>
+        <div class="make-order-wrapper">
+          <a class="make-order" href="#">Оформить заказ
+          </a>
+        </div>
       </div>
     </div>
     <div class="header-main-navigation standart-size">
@@ -55,7 +60,7 @@
             г.Санкт-Петербург, ул.Б.Конюшенная, д. 19/8
           </p>
         </div>
-        <div>
+        <div class="authorize">
           <a class="login-link" href="#">
             <img src="https://via.placeholder.com/20x20" alt="Войти">
             Войти
@@ -93,33 +98,35 @@
         </h2>
       </div>
       <section class="filters">
-        <h3 class="filter-title">
-          Фильтр:
-        </h3>
+        <div class="filter-title">
+          <h3>
+            Фильтр:
+          </h3>
+        </div>
         <form method="POST" action="https://echo.htmlacademy.ru/">
           <div class="filter-form">
-            <div class="price-filter-name">
-              Цена:
-            </div>
-            <div>
+            <div class="price-filter">
+              <div class="price-filter-name">
+                Цена:
+              </div>
               <div class="price-slider">
                 <button type="button">min</button>
                 <button type="button">max</button>
               </div>
               <div class="price-limit-wrapper">
                 <label class="filter-price-limit">
-                  <input type="text" name="priceMin">
+                  <input type="text" name="priceMin" value="0">
                 </label>
                 -
                 <label class="filter-price-limit">
-                  <input type="text" name="priceMax">
+                  <input type="text" name="priceMax" value="3000">
                 </label>
               </div>
             </div>
-            <div class="manufacturer-filter-name">
-              ПРОИЗВОДИТЕЛИ:
-            </div>
-            <div>
+            <div class="manufacturer-filter">
+              <div class="manufacturer-filter-name">
+                ПРОИЗВОДИТЕЛИ:
+              </div>
               <ul>
                 <li><label><input type="checkbox" name="bosch" checked>BOSCH </label>
                 </li>
@@ -133,16 +140,16 @@
                 </li>
               </ul>
             </div>
-            <div class="charging-filter-name">
-              ПИТАНИЕ:
-            </div>
-            <div>
+            <div class="charging-filter">
+              <div class="charging-filter-name">
+                ПИТАНИЕ:
+              </div>
               <ul>
                 <li><label><input name="typeEnergy" type="radio" value="accum" checked>АККУМУЛЯТОРНЫЕ</label></li>
                 <li><label><input name="typeEnergy" type="radio" value="AC">СЕТЕВЫЕ</label></li>
               </ul>
             </div>
-            <button type="submit">ПОКАЗАТЬ</button>
+            <button class="filter-show-button" type="submit">ПОКАЗАТЬ</button>
           </div>
         </form>
       </section>
@@ -160,119 +167,164 @@
         <h3>Результаты фильтрации и сортировки</h3>
         <ul class="search-results-goods">
           <li class="subject">
-            <img src="img/bfg6000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 6000">
-            <a class="name" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
-            <s>30500 Р.</s>
-            <p class="price">25500 Р.</p>
-            <div>
-              <a class="buy-link-subject" href="#">
-                <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
-              </a>
-              <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+            <div class="subject-main-info">
+              <div class="image-item">
+                <img src="img/bfg6000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+              </div>
+              <div class="buy-bookmark">
+                <a class="buy-link-subject" href="#">
+                  <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
+                </a>
+                <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+              </div>
+              <a class="subject-title" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
+              <div class="subject-price-wrapper">
+                <s>30500 Р.</s>
+                <p class="price">25500 Р.</p>
+              </div>
             </div>
-            <img src="https://via.placeholder.com/15x15" alt="">
           </li>
           <li class="subject">
-            <img src="img/bfg6000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 6000">
-            <a class="name" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
-            <s>30500 Р.</s>
-            <p class="price">25500 Р.</p>
-            <div>
-              <a class="buy-link-subject" href="#">
-                <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
-              </a>
-              <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+            <div class="subject-main-info">
+              <div class="image-item">
+                <img src="img/bfg6000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+              </div>
+              <div class="buy-bookmark">
+                <a class="buy-link-subject" href="#">
+                  <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
+                </a>
+                <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+              </div>
+              <a class="subject-title" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
+              <div class="subject-price-wrapper">
+                <s>30500 Р.</s>
+                <p class="price">25500 Р.</p>
+              </div>
             </div>
-            <img src="https://via.placeholder.com/15x15" alt="">
           </li>
           <li class="subject">
-            <img src="img/bfg6000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 6000">
-            <a class="name" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
-            <s>30500 Р.</s>
-            <p class="price">25500 Р.</p>
-            <div>
-              <a class="buy-link-subject" href="#">
-                <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
-              </a>
-              <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+            <div class="subject-main-info">
+              <div class="image-item">
+                <img src="img/bfg6000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+              </div>
+              <div class="buy-bookmark">
+                <a class="buy-link-subject" href="#">
+                  <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
+                </a>
+                <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+              </div>
+              <a class="subject-title" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
+              <div class="subject-price-wrapper">
+                <s>30500 Р.</s>
+                <p class="price">25500 Р.</p>
+              </div>
             </div>
-            <img src="https://via.placeholder.com/15x15" alt="">
           </li>
           <li class="subject">
-            <img src="img/bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-            <a class="name" href="#"> Перфоратор BOSCH<br>BFG 3000</a>
-            <s>22500 Р.</s>
-            <p class="price">15500 Р.</p>
-            <div>
-              <a class="buy-link-subject" href="#">
-                <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
-              </a>
-              <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+            <div class="subject-main-info">
+              <div class="image-item">
+                <img src="img/bfg3000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+              </div>
+              <div class="buy-bookmark">
+                <a class="buy-link-subject" href="#">
+                  <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
+                </a>
+                <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+              </div>
+              <a class="subject-title" href="#"> Перфоратор BOSCH<br>BFG 3000</a>
+              <div class="subject-price-wrapper">
+                <s>22500 Р.</s>
+                <p class="price">15500 Р.</p>
+              </div>
             </div>
-            <img src="https://via.placeholder.com/15x15" alt="">
           </li>
           <li class="subject">
-            <img src="img/bfg6000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 6000">
-            <a class="name" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
-            <s>30500 Р.</s>
-            <p class="price">25500 Р.</p>
-            <div>
-              <a class="buy-link-subject" href="#">
-                <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
-              </a>
-              <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+            <div class="subject-main-info">
+              <div class="image-item">
+                <img src="img/bfg6000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
+              </div>
+              <div class="buy-bookmark">
+                <a class="buy-link-subject" href="#">
+                  <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
+                </a>
+                <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+              </div>
+              <a class="subject-title" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
+              <div class="subject-price-wrapper">
+                <s>30500 Р.</s>
+                <p class="price">25500 Р.</p>
+              </div>
             </div>
-            <img src="https://via.placeholder.com/15x15" alt="">
           </li>
           <li class="subject">
-            <img src="img/bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-            <a class="name" href="#"> Перфоратор BOSCH<br>BFG 2000</a>
-            <p class="price">12500 Р.</p>
-            <div>
-              <a class="buy-link-subject" href="#">
-                <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
-              </a>
-              <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+            <div class="subject-main-info">
+              <div class="image-item">
+                <img src="img/bfg2000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
+              </div>
+              <div class="buy-bookmark">
+                <a class="buy-link-subject" href="#">
+                  <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
+                </a>
+                <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+              </div>
+              <a class="subject-title" href="#"> Перфоратор BOSCH<br>BFG 2000</a>
+              <div class="subject-price-wrapper">
+                <p class="price">12500 Р.</p>
+              </div>
             </div>
-            <img src="https://via.placeholder.com/15x15" alt="">
           </li>
           <li class="subject">
-            <img src="img/bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
-            <a class="name" href="#"> Перфоратор BOSCH<br>BFG 3000</a>
-            <s>22500 Р.</s>
-            <p class="price">15500 Р.</p>
-            <div>
-              <a class="buy-link-subject" href="#">
-                <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
-              </a>
-              <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+            <div class="subject-main-info">
+              <div class="image-item">
+                <img src="img/bfg3000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 3000">
+              </div>
+              <div class="buy-bookmark">
+                <a class="buy-link-subject" href="#">
+                  <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
+                </a>
+                <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+              </div>
+              <a class="subject-title" href="#"> Перфоратор BOSCH<br>BFG 3000</a>
+              <div class="subject-price-wrapper">
+                <s>22500 Р.</s>
+                <p class="price">15500 Р.</p>
+              </div>
             </div>
-            <img src="https://via.placeholder.com/15x15" alt="">
           </li>
           <li class="subject">
-            <img src="img/bfg6000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 6000">
-            <a class="name" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
-            <s>30500 Р.</s>
-            <p class="price">25500 Р.</p>
-            <div>
-              <a class="buy-link-subject" href="#">
-                <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
-              </a>
-              <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+            <div class="subject-main-info">
+              <div class="image-item">
+                <img src="img/bfg6000.jpg" width="164" height="154" alt="Перфоратор BOSCH BFG 6000">
+              </div>
+              <div class="buy-bookmark">
+                <a class="buy-link-subject" href="#">
+                  <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
+                </a>
+                <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+              </div>
+              <a class="subject-title" href="#"> Перфоратор BOSCH<br>BFG 6000</a>
+              <div class="subject-price-wrapper">
+                <s>30500 Р.</s>
+                <p class="price">25500 Р.</p>
+              </div>
             </div>
-            <img src="https://via.placeholder.com/15x15" alt="">
           </li>
           <li class="subject">
-            <img src="img/bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
-            <a class="name" href="#"> Перфоратор BOSCH<br>BFG 2000</a>
-            <p class="price">12500 Р.</p>
-            <div>
-              <a class="buy-link-subject" href="#">
-                <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
-              </a>
-              <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+            <div class="subject-main-info">
+              <div class="image-item">
+                <img src="img/bfg2000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 2000">
+              </div>
+              <div class="buy-bookmark">
+                <a class="buy-link-subject" href="#">
+                  <img src="https://via.placeholder.com/15x15" alt="">КУПИТЬ
+                </a>
+                <a class="bookmark-link-subject" href="#">В ЗАКЛАДКИ</a>
+              </div>
+              <a class="subject-title" href="#"> Перфоратор BOSCH<br>BFG 2000</a>
+              <div class="subject-price-wrapper">
+                <p class="price">12500 Р.</p>
+              </div>
             </div>
-            <img src="https://via.placeholder.com/15x15" alt="">
           </li>
         </ul>
         <ul class="page-separator">
