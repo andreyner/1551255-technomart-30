@@ -79,6 +79,8 @@
   --form-footer: #F4F4F4;
   --newshadow:rgba(0, 0, 0, 0.15);
   --basic-grey: #3D546F;
+  --logo-border:#B52933;
+  --basic-black-rgb: 0, 0, 0;
 }
 body {
   background-color: var(--basic-white);
@@ -149,7 +151,7 @@ img {
   grid-column: 1/2;
   display: flex;
 }
-.main-header-logo, .main-footer-logo {
+.main-header-logo {
   background-image: url("../img/logo-technomart.svg");
   background-repeat: no-repeat;
   width:220px;
@@ -159,12 +161,81 @@ img {
   background-color: var(--red-logo);
 }
 .main-footer-logo {
+  background-image: url("../img/logo-technomart-footer.svg");
+  height: 23px;
+  width: 138px;
+  background-repeat: no-repeat;
+  padding:20px 41px;
+  background-origin: content-box;
+  background-color: var(--red-logo);
+  display: flex;
+}
+.logo {
+  box-shadow:  0 5px 0 0 rgba(var(--basic-black-rgb), 0.24),
+  0 5px 0 0 var(--logo-border);
+}
+.form-search-input {
+  background-color: transparent;
+  font-size: 18px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  line-height: 24px;
+  color: var(--basic-white);
+  border:0;
+  padding-left: 8px;
+  order:2;
+}
+.searching button {
+  order:1;
+}
+.form-search-input:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+.form-search-input:active,.form-search-input:focus {
+  border:0;
+  outline: none;
+  fill-opacity: 0.3;
+}
+.form-search-input:focus ~ button path {
+  fill:var(--red-logo);
+}
+.form-search-input:focus ~ button {
+  background-color: var(--basic-white);
+}
+.form-search-input::-webkit-input-placeholder {
+  color: var(--basic-white);
+}
+.main-footer-logo {
    display: flex;
    align-items: center;
    justify-content: center;
 }
+.form-search-input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
 .form-search-wrapper {
   grid-column: 2/3;
+  display: flex;
+}
+.form-search-wrapper button {
+  background-color: transparent;
+  outline:none;
+  border:0;
+  padding-left: 17px;
+  padding-right: 0px;
+}
+.form-serarch-button:active svg{
+  fill-opacity: 0.3;
+}
+.searching {
+  display: flex;
+}
+.form-search-wrapper svg {
+  fill-opacity: 0.3;
+}
+.form-search-wrapper:hover svg {
+  fill-opacity: 1;
 }
 .bookmark-wrapper {
   grid-column: 3/4;
@@ -309,6 +380,22 @@ align-items:center;
   grid-column:1/3;
   grid-row:2/4;
 }
+.perforator-for-men {
+  background-image: url("../img/slider-perforator.jpg");
+}
+.perforator-slider {
+  padding: 0;
+  width: 6px;
+  height: 6px;
+  background-color: var(--basic-white);
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 12px;
+}
+.active-switch {
+  background-color:var(--red-logo);
+}
 .features-items {
 display: grid;
 grid-template-columns: repeat(3,300px);
@@ -373,6 +460,16 @@ display: flex;
   list-style-type:none;
   margin-right: 80px;
   padding: 0;
+  position: relative;
+}
+.services-list::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 279px;
+  top: -44px;
+  left: 230px;
+  background-image: url("../img/long-shadow.png");
 }
 .service-delivery, .service-warranty,.service-credit {
   grid-column:2/3;
@@ -397,8 +494,7 @@ display: flex;
   padding-top:36px;
 }
 .form-search {
-  color: var(--basic-white);
-  font-size: 18px;
+  display: none;
 }
 .header-container a {
   color: var(--basic-white);
@@ -445,6 +541,9 @@ display: flex;
   display:flex;
   align-items:center;
   box-sizing: border-box;
+}
+.login-link svg {
+  padding-right: 7px;
 }
 .login-link, .reg-link {
   color: var(--basic-black);
@@ -497,6 +596,7 @@ display: flex;
   /*box-sizing:border-box;
   height: 318px;*/
   border: 1px solid var(--gray);
+  position: relative;
 }
 .subject-main-info {
   display: flex;
@@ -667,6 +767,12 @@ line-height: 24px;
   font-size: 21px;
   line-height: 30px;
   color:var(--basic-white);
+  width: 240px;
+  height: 61px;
+  padding-left: 22px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
 }
 .services-list li:hover {
   background-color: var(--dark-blue);
@@ -741,6 +847,7 @@ border-radius: 2px;
 }
 .about-company-delivery li {
   position: relative;
+  padding-bottom: 12px;
 
 }
 .about-company-delivery li::before {
@@ -858,8 +965,8 @@ grid-template-columns:  repeat(5, max-content);
   grid-template-columns: 100%;
 }
 .footer-nav-wrapper div {
-  display: grid;
-  grid-template-columns: max-content 1fr;
+  display: flex;
+  justify-content: space-between;
 }
 .footer-mail {
   width: 137px;
@@ -1299,6 +1406,7 @@ line-height: 30px;
   color:var(--basic-white);
   font-family: "Cuprum";
   font-weight: bold;
+  margin-top: 5px;
 }
 .features-opening >span {
   text-transform:uppercase;
@@ -1311,6 +1419,29 @@ line-height: 30px;
   padding-top: 20px;
   grid-template-rows: 50% 50%;
   grid-template-columns: 50% 50%;
+
+}
+.new-sticker {
+  position:relative;
+  overflow: hidden;
+}
+.new-sticker::before {
+  position: absolute;
+  content: "NEW";
+  height: 30px;
+  width: 100px;
+  right: -27px;
+  top:7px;
+  background-color: var(--red-logo);
+  color:var(--basic-white);
+  transform: rotate(45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:"Cuprum", "Arial", "sans-serif";
+  font-size: 14px;
+  padding-top: 5px;
+  line-height: 18px;
 }
 .features-opening {
   background-color:var(--white-transporent);
@@ -1357,6 +1488,7 @@ line-height: 30px;
   grid-template-areas:"title"
   "nav"
   "footer";
+  grid-template-rows: min-content 1fr 1fr;
 }
 .features-perforators-title {
   font-family: "Cuprum";
@@ -1366,24 +1498,41 @@ line-height: 30px;
   color:var(--basic-white);
   grid-area: title;
   background: var(--shadow);
-  height: 104px;
+  padding-left: 24px;
+  padding-top: 23px;
+  padding-bottom: 16px;
+  display: grid;
 }
 .features-perforators-nav {
   grid-area: nav;
   display: grid;
   grid-template-areas:"left right";
+  padding-top: 18px;
+  padding-left: 24px;
+  padding-right: 20px;
 }
 .perforators-slider-left {
   grid-area: left;
   justify-self: left;
+  background-image: url("../img/perforator-left.svg");
 }
 .perforators-slider-right {
   grid-area: right;
   justify-self: right;
+  background-image: url("../img/perforator-right.svg");
+}
+.perforators-slider-right, .perforators-slider-left {
+  height: 41px;
+  width: 23px;
 }
 .features-perforators-footer{
   grid-area: footer;
   display: flex;
+  align-items: flex-end;
+  padding-bottom: 27px;
+  padding-left: 24px;
+  padding-right: 24px;
+  position: relative;
 }
 .features-perforators-title span {
   font-weight: normal;
@@ -1397,6 +1546,9 @@ line-height: 30px;
   line-height: 18px;
   text-transform:uppercase;
   width: 192px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  text-align: center;
 }
 .perforators-catalog:hover {
   background-color:var(--red-extra);
@@ -1405,7 +1557,11 @@ line-height: 30px;
   background-color:var(--red-error);
 }
 .perforators-bread-crumbs {
-  justify-self: center;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 280px;
+  top:40px;
 }
 .main-footer-address a {
   color: inherit;

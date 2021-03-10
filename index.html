@@ -16,22 +16,21 @@
   <header class="main-header">
     <div class="header-wrapper">
       <div class="header-container">
-        <div class="logo-wrapper">
+        <div class="logo-wrapper logo">
           <a href="#" class="main-header-logo">
           </a>
         </div>
         <div class="form-search-wrapper">
-          <form action="#" method="post">
-            <button type="submit">
+          <form action="#" method="post" class="searching">
+            <input class="form-search-input" type="search" name="search" id="search" placeholder="Поиск:">
+            <button type="submit" class="form-serarch-button">
               <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
                   fill="white" />
               </svg>
             </button>
-            <label class="form-search">Поиск:
-              <input type="search" name="search">
-            </label>
+            <label class="form-search" for="search">Поиск:</label>
           </form>
         </div>
         <div class="bookmark-wrapper">
@@ -55,7 +54,7 @@
         <p class="store-description">
           Интернет-магазин
           строительных материалов
-          и инструментов для ремонта
+          и&nbsp;инструментов для ремонта
         </p>
         <div class="header-contacts">
           <p class="store-description-phone">
@@ -101,7 +100,7 @@
     <section class="features standart-size">
       <h3>Наши преимущества</h3>
       <div class="features-items">
-        <div class="features-materials features-standart-view">
+        <div class="features-materials features-standart-view new-sticker">
           <div class="features-title">
             <span>Материалы</span>
           </div>
@@ -131,29 +130,23 @@
           <div class="features-icon technics-icon">
           </div>
         </div>
-        <div class="features-perforators features-big-view">
+        <div class="features-perforators features-big-view perforator-for-men">
           <div class="features-perforators-title">
             <div>Перфораторы</div>
             <span>Настоящие мужские игрушки</span>
           </div>
           <div class="features-perforators-nav">
-            <a class="perforators-slider-left" href="#">
-              <img src="https://via.placeholder.com/22x40" alt="">
-            </a>
-            <a class="perforators-slider-right" href="#">
-              <img src="https://via.placeholder.com/22x40" alt="">
-            </a>
+            <a class="perforators-slider-left" href="#"> </a>
+            <a class="perforators-slider-right" href="#"></a>
           </div>
           <div class="features-perforators-footer">
             <a class="perforators-catalog" href="#">
               Открыть каталог
             </a>
             <div class="perforators-bread-crumbs">
-              <a class="perforators-disable-switch" href="#">
-                <img src="https://via.placeholder.com/6x6" alt="">
+              <a class="perforator-slider" href="#">
               </a>
-              <a class="perforators-active-switch" href="#">
-                <img src="https://via.placeholder.com/6x6" alt="">
+              <a class="perforator-slider active-switch" href="#">
               </a>
             </div>
           </div>
@@ -182,7 +175,7 @@
     </section>
     <section class="popular-products standart-size">
       <div class="popular-products-container">
-        <h3>ПОПУЛЯРНЫЕ ТОВАРЫ</h3>
+        <h3>ПОПУЛЯРНЫЕ ТОВАРЫ:</h3>
         <a class="all-products" href="#">ВСЕ ПОПУЛЯРНЫЕ ТОВАРЫ</a>
       </div>
       <ul class="products-content">
@@ -204,7 +197,7 @@
             </div>
           </div>
         </li>
-        <li class="subject">
+        <li class="subject new-sticker">
           <div class="subject-main-info">
             <div class="image-item">
               <img src="img/bfg3000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 3000">
@@ -240,7 +233,7 @@
             </div>
           </div>
         </li>
-        <li class="subject">
+        <li class="subject new-sticker">
           <div class="subject-main-info">
             <div class="image-item">
               <img src="img/bfg2000.jpg" width="127" height="112" alt="Перфоратор BOSCH BFG 2000">
@@ -323,7 +316,7 @@
           </ul>
           <section class="service-delivery">
             <div class="concrete-service-header">
-              <h4>Доставка:</h4>
+              <h4>Доставка</h4>
               <p class="service-description">Мы с удовольствием доставим ваш товар прямо <br>
                 к вашему подъезду совершенно бесплатно!<br>
                 Ведь мы неплохо заработаем, <br>
@@ -428,7 +421,7 @@
     <div class="footer-first-wrapper">
       <div class="footer-nav-wrapper standart-size">
         <div>
-          <a class="main-footer-logo" href="#"></a>
+          <a class="main-footer-logo logo" href="#"></a>
           <nav>
             <ul class="footer-main-navigation">
               <li> <a href="blank.html">Компания</a></li>
