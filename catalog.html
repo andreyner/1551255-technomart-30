@@ -9,7 +9,8 @@
   <link rel="apple-touch-icon" href="img/favIcons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <!-- <link href="css/style.css" rel="stylesheet">-->
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +20,9 @@
         <a href="#" class="main-header-logo logo">
         </a>
         <form action="#" method="post" class="searching">
-          <input class="form-search-input" type="search" name="search" id="search" placeholder="Поиск:">
+          <label for="search" class="visually-hidden">Строка для поиска</label>>
+          <input class="form-search-input" type="search" name="search" id="search" placeholder="Поиск:"
+            aria-label="Строка для поиска">
           <button type="submit" class="form-serarch-button">
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
@@ -42,8 +45,8 @@
     <div class="header-main-navigation standart-size">
       <div class="user-navigation">
         <p class="store-description">
-          Интернет-магазин </br>
-          строительных материалов</br>
+          Интернет-магазин <br>
+          строительных материалов<br>
           и&nbsp;инструментов для ремонта
         </p>
         <div class="header-contacts">
@@ -83,7 +86,7 @@
                   </svg>
                   <span>Равшан Джамшутович</span>
                 </a>
-                <button class="logout-button authorization-svg-link" alt="Выйти">
+                <button class="logout-button authorization-svg-link" aria-label="Выйти">
                   <svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 8.5L11.125 0v6h-6v5h6v6L20 8.5z" fill="#C5C5C5" />
                     <path
@@ -102,9 +105,9 @@
       </div>
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li> <a href="blank.html">Главная</a></li>
+          <li> <a href="index.html">Главная</a></li>
           <li> <a href="blank.html">Компания</a></li>
-          <li> <a href="blank.html">Каталог</a></li>
+          <li> <a href="catalog.html">Каталог</a></li>
           <li> <a href="blank.html">Новости</a></li>
           <li> <a href="blank.html">Спецпредложения</a></li>
           <li> <a href="blank.html">Доставка</a></li>
@@ -134,7 +137,7 @@
           </h3>
         </div>
         <form method="POST" action="https://echo.htmlacademy.ru/" class="filter-form">
-          <feildset class="price-filter feildset">
+          <fieldset class="price-filter feildset">
             <legend class="price-filter-name">Цена:</legend>
             <div class="range-filter">
               <div class="range-controls">
@@ -146,15 +149,15 @@
               </div>
               <div class="price-controls">
                 <label class="min-price">
-                  <input type="number" name="min-price" value="0">
+                  <input type="number" name="min-price" value="0" aria-label="Нижняя граница цены">
                 </label>—
                 <label class="max-price">
-                  <input type="number" name="max-price" value="30000">
+                  <input type="number" name="max-price" value="30000" aria-label="Верхняя граница цены">
                 </label>
               </div>
             </div>
-          </feildset>
-          <feildset class="manufacturer-filter feildset">
+          </fieldset>
+          <fieldset class="manufacturer-filter feildset">
             <legend class="manufacturer-filter-name">
               ПРОИЗВОДИТЕЛИ:
             </legend>
@@ -260,8 +263,8 @@
                 </label>
               </li>
             </ul>
-          </feildset>
-          <feildset class="charging-filter feildset">
+          </fieldset>
+          <fieldset class="charging-filter feildset">
             <legend class="charging-filter-name">
               ПИТАНИЕ:
             </legend>
@@ -278,7 +281,7 @@
                 </label>
               </li>
             </ul>
-          </feildset>
+          </fieldset>
           <button class="filter-show-button" type="submit">ПОКАЗАТЬ</button>
         </form>
       </section>
@@ -305,7 +308,8 @@
             <li class="sort-item">
               <input class="visually-hidden sort-radio sort-direction-radio" type="radio" name="sort-direction"
                 value="increasing" id="sort-increasing" checked>
-              <label class="sort-direction-ladel sort-increasing-label" for="sort-increasing" aria-label="По убыванию">
+              <label class="sort-direction-ladel sort-increasing-label" for="sort-increasing"
+                aria-label="По возрастанию">
                 <svg width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 0L11 10L0 10" fill="#C5C5C5" />
                 </svg>
@@ -361,7 +365,7 @@
                 </div>
               </div>
             </li>
-            <li class="subject new-sticker">
+            <li class="subject new-sticker subject-demo">
               <div class="subject-main-info">
                 <div class="image-item hidden">
                   <img src="img/bfg6000.jpg" width="184" height="164" alt="Перфоратор BOSCH BFG 6000">
@@ -495,38 +499,37 @@
         </section>
       </div>
     </div>
-    <section class="in-bin-popup">
-      <h3>Добавление в корзину</h3>
-      <img class="in-bin-popup-close" src="https://via.placeholder.com/21x21" alt="">
-      <div class="in-bin-popup-status">
-        <img src="https://via.placeholder.com/66x66" alt="">
-        <b>Товар добавлен в корзину!</b>
-      </div>
-      <div class="in-bin-popup-footer">
-        <a class="make-order" href="#">
-          ОФОРМИТЬ ЗАКАЗ
-        </a>
-        <a class="continue-shopping" href="#">
-          ПРОДОЛЖИТЬ ПОКУПКИ
-        </a>
-      </div>
-    </section>
     <article class="perforators-article">
       <div class="standart-size">
         <h3>ПАРА СЛОВ О ПЕРФОРАТОРАХ</h3>
         <p class="about-perforstors">
-          Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
+          Перфоратор &ndash; универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в
           кирпиче,
           бетоне и камне.<br>
           Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции
           дрели,
           шуруповерта и отбойного молотка.<br>
-          В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и
+          В ассортиментном ряду есть выбор &laquo;трехрежимников&raquo;&colon; в одном устройстве будут совмещены
+          отбойный
+          молоток и
           ударная
           дрель.
         </p>
       </div>
     </article>
+    <section class="modal-bin modal visually-hidden">
+      <h3 class="visually-hidden">Добавление в корзину</h3>
+      <p class="modal-bin-body">Товар добавлен в корзину!</p>
+      <div class="modal-bin-footer">
+        <a class="modal-bin-button modal-make-order-button red-button-active red-button-hover" href="#">
+          Оформить заказ
+        </a>
+        <a class="modal-bin-button modal-button-continue-shopping" href="#">
+          Продлжить покупки
+        </a>
+      </div>
+      <button class="modal-close modal-bin-close" type="button" aria-label="Кнопка закрытия"></button>
+    </section>
   </main>
   <footer class="main-footer">
     <div class="footer-first-wrapper">
