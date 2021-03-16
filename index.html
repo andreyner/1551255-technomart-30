@@ -10,7 +10,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
-  <!--<link href="css/style.css" rel="stylesheet">-->
+  <!--  <link href="css/style.css" rel="stylesheet">-->
 </head>
 
 <body class="page-body">
@@ -116,29 +116,31 @@
             <span> Для стройки</span>
           </a>
         </div>
-        <div class="features-perforators features-big-view perforator-for-men">
+        <div class="features-perforators features-big-view">
           <ul class="services-slider-title unmarked-list">
             <li class="services-slide">
               <p class="slide-title">Перфораторы</p>
               <p class="slide-sub-title">Настоящие мужские игрушки</p>
+              <img class="services-slider-slide" src="img/slider-perforator.jpg" alt="Картинка с перфоратором">
             </li>
             <li class="services-slide visually-hidden">
               <p class="slide-title">Дрели</p>
               <p class="slide-sub-title">Соседям на радость!</p>
+              <img class="services-slider-slide" src="img/slider-drill.jpg" alt="Картинка с дрелью">
             </li>
           </ul>
           <div class="features-perforators-nav">
-            <a class="perforators-slider-left" href="#"> </a>
-            <a class="perforators-slider-right" href="#"></a>
+            <a class="perforators-slider-left perforators-slider" href="#" aria-label="Предыдущий слайд"> </a>
+            <a class="perforators-slider-right perforators-slider" href="#" aria-label="Следующий слайд"></a>
           </div>
           <div class="features-perforators-footer">
             <a class="perforators-catalog" href="catalog.html">
               Открыть каталог
             </a>
             <div class="perforators-bread-crumbs">
-              <a class="perforator-slider" href="#">
+              <a class="perforator-slider" href="#" aria-label="Переключить предыдущий слайд">
               </a>
-              <a class="perforator-slider slider-active-switch" href="#">
+              <a class="perforator-slider slider-active-switch" aria-label="Текущий слайд" href="#">
               </a>
             </div>
           </div>
@@ -352,7 +354,7 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a class="more-about-company" href="#">Подробнее о компании</a>
+        <a class="more-about-company red-button-active red-button-hover" href="#">Подробнее о компании</a>
       </div>
       <div class="about-company-contacts">
         <h3>КОНТАКТЫ</h3>
@@ -363,7 +365,7 @@
         <a class="mini-map" href="#">
           <img src="img/miniMap.jpg" width="300" height="158" alt="Карта">
         </a>
-        <a class="about-company-write-us" href="#">Заблудились? Напишите НАМ!</a>
+        <a class="about-company-write-us red-button-active red-button-hover" href="#">Заблудились? Напишите НАМ!</a>
       </div>
     </section>
     <section class="modal-write-us modal visually-hidden">
@@ -397,7 +399,7 @@
       <h3 class="visually-hidden">Как до нас добраться</h3>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5910067424356!2d30.322654145067414!3d59.938928540116265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1615678196742!5m2!1sru!2sru"
-        width="943" height="449" frameBorder="0" allowfullscreen="" loading="lazy"
+        width="943" height="449" allowfullscreen="" loading="lazy"
         title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
       <button class="modal-close modal-map-close" type="button" aria-label="Кнопка закрытия"></button>
     </section>
@@ -439,7 +441,7 @@
           </p>
           <ul class="footer-social-sites">
             <li>
-              <a class="social-button" href="#">
+              <a class="social-button" href="#" aria-label="Ссылка Вконтакте">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M22.1627 1.4839C33.6533 1.4839 42.9683 10.5873 42.9683 21.8169C42.9683 33.0461 33.6533 42.1494 22.1627 42.1494C10.6721 42.1494 1.35714 33.0461 1.35714 21.8169C1.35714 10.5873 10.6721 1.4839 22.1627 1.4839Z"
@@ -451,7 +453,7 @@
               </a>
             </li>
             <li>
-              <a class="social-button" href="#">
+              <a class="social-button" href="#" aria-label="Ссылка Facebook">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.8938 1.4839C33.1232 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1232 42.1494 21.8938 42.1494C10.6643 42.1494 1.56108 33.0461 1.56108 21.8169C1.56108 10.5873 10.6643 1.4839 21.8938 1.4839Z"
@@ -462,7 +464,7 @@
               </a>
             </li>
             <li>
-              <a class="social-button" href="#">
+              <a class="social-button" href="#" aria-label="Ссылка Instagram">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.8938 1.4839C33.1233 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1233 42.1494 21.8938 42.1494C10.6643 42.1494 1.56112 33.0461 1.56112 21.8169C1.56112 10.5873 10.6643 1.4839 21.8938 1.4839Z"

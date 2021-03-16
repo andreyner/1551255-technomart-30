@@ -9,8 +9,8 @@
   <link rel="apple-touch-icon" href="img/favIcons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/normalize.css" rel="stylesheet">
-  <!-- <link href="css/style.css" rel="stylesheet">-->
   <link href="css/style.min.css" rel="stylesheet">
+  <!--<link href="css/style.css" rel="stylesheet">-->
 </head>
 
 <body>
@@ -20,10 +20,10 @@
         <a href="#" class="main-header-logo logo">
         </a>
         <form action="#" method="post" class="searching">
-          <label for="search" class="visually-hidden">Строка для поиска</label>>
+          <label for="search" class="visually-hidden">Строка для поиска</label>
           <input class="form-search-input" type="search" name="search" id="search" placeholder="Поиск:"
             aria-label="Строка для поиска">
-          <button type="submit" class="form-serarch-button">
+          <button type="submit" class="form-serarch-button" aria-label="Начать поиск">
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd"
                 d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z"
@@ -78,7 +78,8 @@
           <div class="unauthorized-user-wrapper">
             <div class="account-user-links">
               <div class="current-user">
-                <a class="authorization-svg-link current-user-link" href="blank.html">
+                <a class="authorization-svg-link current-user-link" href="blank.html"
+                  aria-label="Профиль текущего пользователя">
                   <svg class="user-icon" width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278C14.021 2.276 12.221 0 10 0S5.979 2.276 5.979 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39C-.026 14.902 0 18 0 18h20s.025-3.099-2.119-3.834z"
@@ -120,7 +121,7 @@
     <h1>Каталог магазина Техномарт</h1>
     <div class="catalog-top standart-size">
       <ul class="bread-crumps standart-size">
-        <li><a href="index.html"></a></li>
+        <li><a class="bread-crumps-home" href="index.html" aria-label="Ссылка на главную страницу"></a></li>
         <li><a href="catalog.html">Каталог</a></li>
         <li><a href="#">Инструмент</a></li>
         <li>Перфораторы</li>
@@ -148,11 +149,11 @@
                 <div class="toggle toggle-max" tabindex="0"></div>
               </div>
               <div class="price-controls">
-                <label class="min-price">
-                  <input type="number" name="min-price" value="0" aria-label="Нижняя граница цены">
+                <label class="min-price" aria-label="Нижняя граница цены">
+                  <input type="number" name="min-price" value="0">
                 </label>—
-                <label class="max-price">
-                  <input type="number" name="max-price" value="30000" aria-label="Верхняя граница цены">
+                <label class="max-price" aria-label="Верхняя граница цены">
+                  <input type="number" name="max-price" value="30000">
                 </label>
               </div>
             </div>
@@ -535,7 +536,7 @@
     <div class="footer-first-wrapper">
       <div class="footer-nav-wrapper standart-size">
         <div class="footer-first-level">
-          <a class="main-footer-logo logo" href="#"></a>
+          <a class="main-footer-logo logo" href="index.html" aria-label="Ссылка на главную страницу"></a>
           <nav>
             <ul class="footer-main-navigation">
               <li> <a href="blank.html">Компания</a></li>
@@ -568,7 +569,7 @@
           </p>
           <ul class="footer-social-sites">
             <li>
-              <a class="social-button" href="#">
+              <a class="social-button" href="#" aria-label="Ссылка Вконтакте">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M22.1627 1.4839C33.6533 1.4839 42.9683 10.5873 42.9683 21.8169C42.9683 33.0461 33.6533 42.1494 22.1627 42.1494C10.6721 42.1494 1.35714 33.0461 1.35714 21.8169C1.35714 10.5873 10.6721 1.4839 22.1627 1.4839Z"
@@ -580,7 +581,7 @@
               </a>
             </li>
             <li>
-              <a class="social-button" href="#">
+              <a class="social-button" href="#" aria-label="Ссылка Facebook">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.8938 1.4839C33.1232 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1232 42.1494 21.8938 42.1494C10.6643 42.1494 1.56108 33.0461 1.56108 21.8169C1.56108 10.5873 10.6643 1.4839 21.8938 1.4839Z"
@@ -591,7 +592,7 @@
               </a>
             </li>
             <li>
-              <a class="social-button" href="#">
+              <a class="social-button" href="#" aria-label="Ссылка Instagram">
                 <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M21.8938 1.4839C33.1233 1.4839 42.2265 10.5873 42.2265 21.8169C42.2265 33.0461 33.1233 42.1494 21.8938 42.1494C10.6643 42.1494 1.56112 33.0461 1.56112 21.8169C1.56112 10.5873 10.6643 1.4839 21.8938 1.4839Z"
