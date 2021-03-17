@@ -101,6 +101,25 @@ body {
   align-content: start;
   min-width: 1200px;
 }
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 a {
   text-decoration: none;
 }
@@ -510,6 +529,7 @@ img {
 .service-item {
   position: relative;
   z-index: 1;
+  display: none;
 }
 .service-item-current {
   display: block;
@@ -761,7 +781,7 @@ img {
   flex-grow: 1;
   height: inherit;
 }
-.subject:hover,.subject-demo {
+.subject:hover {
   box-shadow: 0px 4px 20px var(--newshadow);
 }
 
@@ -771,7 +791,7 @@ img {
   height: 179px;
   position: relative;
   }
-.subject:hover .buy-bookmark, .subject.subject-demo .buy-bookmark {
+.subject:hover .buy-bookmark {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -780,7 +800,7 @@ img {
   align-content: flex-start;
   font-weight: normal;
 }
-.subject:hover .image-item, .subject.subject-demo .image-item {
+.subject:hover .image-item {
   display: none;
 }
 .subject .image-item {
@@ -923,13 +943,13 @@ img {
   font-weight:normal;
 }
 .services h3 {
- font-size: 30px;
- line-height: 30px;
+  font-size: 30px;
+  line-height: 30px;
 }
 .services .about-services {
- font-family: "PT Sans", "Arial", "sans-serif";
- font-style: normal;
- font-weight: normal;
+  font-family: "PT Sans", "Arial", "sans-serif";
+  font-style: normal;
+  font-weight: normal;
   font-size: 13px;
   line-height: 24px;
   padding:0;
@@ -951,8 +971,9 @@ img {
 }
 .services-list li:hover {
   background-color: var(--dark-blue);
+  color: var(--basic-white);
 }
-.services-list li:active, .services-list li:nth-child(1) {
+.services-list li:active, .services-list .active-service {
   background-color: var(--basic-white);
   color:var(--extra-dark-blue);
 }
@@ -1390,10 +1411,26 @@ img {
 .sort-direction-ladel {
   cursor: pointer;
 }
+.sort-direction-ladel:hover path {
+  fill:var(--basic-black);
+}
+.sort-direction-ladel:active path {
+  fill:var(--red-logo);
+}
 .sorting ul {
   margin-top: 0px;
   margin-bottom: 0px;
   padding-left: 0;
+}
+.sort-type-list .sort-ladel:hover {
+  color: var(--basic-black);
+  border-bottom: 1px  solid var(--red-logo);
+  opacity: 1;
+}
+.sort-type-list .sort-ladel:active {
+  color: var(--red-logo);
+  border-bottom: none;
+  opacity: 1;
 }
 .bread-crumps li {
   position: relative;
@@ -2146,6 +2183,9 @@ img {
 }
 .services-slide {
   padding: 24px 0 16px 23px;
+  display: none;
+}
+.active-slide {
   display: block;
 }
 .unmarked-list {
@@ -2163,6 +2203,7 @@ img {
 }
 .perforators-slider, .slide-title, .slide-sub-title {
   z-index: 500;
+  background-repeat: no-repeat;
 }
 .perforators-slider-left {
   grid-area: left;

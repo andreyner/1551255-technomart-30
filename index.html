@@ -10,7 +10,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
-  <!--  <link href="css/style.css" rel="stylesheet">-->
+  <!--<link href="css/style.css" rel="stylesheet">-->
 </head>
 
 <body class="page-body">
@@ -119,14 +119,14 @@
         <div class="features-perforators features-big-view">
           <ul class="services-slider-title unmarked-list">
             <li class="services-slide">
-              <p class="slide-title">Перфораторы</p>
-              <p class="slide-sub-title">Настоящие мужские игрушки</p>
-              <img class="services-slider-slide" src="img/slider-perforator.jpg" alt="Картинка с перфоратором">
-            </li>
-            <li class="services-slide visually-hidden">
               <p class="slide-title">Дрели</p>
               <p class="slide-sub-title">Соседям на радость!</p>
               <img class="services-slider-slide" src="img/slider-drill.jpg" alt="Картинка с дрелью">
+            </li>
+            <li class="services-slide active-slide">
+              <p class="slide-title">Перфораторы</p>
+              <p class="slide-sub-title">Настоящие мужские игрушки</p>
+              <img class="services-slider-slide" src="img/slider-perforator.jpg" alt="Картинка с перфоратором">
             </li>
           </ul>
           <div class="features-perforators-nav">
@@ -166,7 +166,7 @@
     <section class="popular-products standart-size">
       <div class="popular-products-container">
         <h3>ПОПУЛЯРНЫЕ ТОВАРЫ:</h3>
-        <a class="all-products" href="#">Все популярные товары</a>
+        <a class="all-products red-button-hover red-button-active" href="#">Все популярные товары</a>
       </div>
       <ul class="products-content">
         <li class="subject">
@@ -247,7 +247,7 @@
     <section class="popular-manufacturers standart-size">
       <div class="popular-manufacturers-container">
         <h3>ПОПУЛЯРНЫЕ ПРОИЗВОДИТЕЛИ:</h3>
-        <a class="all-manufacturers" href="#">Все производители</a>
+        <a class="all-manufacturers red-button-hover red-button-active" href="#">Все производители</a>
       </div>
       <div class="manufacturers-content">
         <div class="manufacturer">
@@ -301,11 +301,11 @@
         </p>
         <div class="services-wrapper">
           <ul class="services-list">
-            <li>Доставка</li>
+            <li class="active-service">Доставка</li>
             <li>Гарантия</li>
             <li>Кредит</li>
           </ul>
-          <section class="service-delivery service-item">
+          <section class="service-delivery service-item service-item-current">
             <h4>Доставка</h4>
             <p class="service-description">
               Мы с удовольствием доставим ваш товар прямо <br>
@@ -314,7 +314,7 @@
               поднимая его на ваш этаж!
             </p>
           </section>
-          <section class="service-warranty service-item visually-hidden">
+          <section class="service-warranty service-item">
             <h4>ГАРАНТИЯ</h4>
             <p class="service-description">
               Если купленный у нас товар поломается или заискрит,<br>
@@ -324,7 +324,7 @@
               Дом уж восстановите как-нибудь сами.
             </p>
           </section>
-          <section class="service-credit service-item visually-hidden">
+          <section class="service-credit service-item">
             <h4>КРЕДИТ</h4>
             <p class="service-description">
               Залезть в долговую яму стало проще!<br>
@@ -375,17 +375,17 @@
           <p class="write-us-form-item">
             <label class="write-us-label" for="write-us-name"> Ваше имя:</label>
             <input class="form-input-user-name write-us-input" type="text" name="name" id="write-us-name"
-              placeholder="Имя Фамилия">
+              placeholder="Имя Фамилия" required>
           </p>
           <p class="write-us-form-item write-us-text">
             <label class="write-us-label" for="write-us-email"> Ваш e-mail:</label>
             <input class="form-input-user-email write-us-input" type="email" name="email" id="write-us-email"
-              placeholder="email@example.com">
+              placeholder="email@example.com" required>
           </p>
           <p class="write-us-form-item write-us-form-item-text">
             <label class="write-us-label" for="write-us-text"> Текст письма: </label>
             <textarea class="form-input-text write-us-input" name="comment" placeholder="В свободной форме"
-              id="write-us-text"></textarea>
+              id="write-us-text" required></textarea>
           </p>
         </div>
         <div class="write-us-form-footer">
@@ -488,6 +488,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>
